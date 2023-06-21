@@ -25,7 +25,7 @@ class _RootState extends State<Root> {
     if (token != '' && token != null) {
       Get.offAndToNamed(mainRoute);
     } else {
-      Get.offAndToNamed(loginRoute);
+      Get.offAndToNamed(dashboardRoute);
     }
   }
 

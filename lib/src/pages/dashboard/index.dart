@@ -1,7 +1,9 @@
 // import 'package:ebabul/src/services/assets.dart';
 // import 'package:ebabul/src/services/assets.dart';
+import 'package:ebabul/src/router/constant.dart';
 import 'package:ebabul/src/services/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -201,10 +203,13 @@ class _DashboardState extends State<Dashboard> {
                               width: 100,
                             ),
                             SizedBox(height: 5),
-                            Text(
-                              'Login',
-                              style: TextStyle(
-                                  color: Color(0xFF359D9E), fontSize: 17),
+                            InkWell(
+                              onTap: () => Get.toNamed(loginRoute),
+                              child: Text(
+                                'Login',
+                                style: TextStyle(
+                                    color: Color(0xFF359D9E), fontSize: 17),
+                              ),
                             )
                           ],
                         ),
