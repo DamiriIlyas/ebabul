@@ -55,9 +55,9 @@ class _BiayaState extends State<Biaya> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20, top: 60, bottom: 20),
+                    padding: const EdgeInsets.only(left: 20, right: 20, top: 60, bottom: 10),
                     child: Container(
-                      height: 900,
+                      height: 650,
                       width: 320,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -318,7 +318,6 @@ class _BiayaState extends State<Biaya> {
                                     child: Divider(
                                       color: Colors.grey,
                                     ),
-                                    
                                   ),
                                   SizedBox(height: 5),
                                     Row(

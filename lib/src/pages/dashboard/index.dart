@@ -1,5 +1,6 @@
 // import 'package:ebabul/src/services/assets.dart';
 // import 'package:ebabul/src/services/assets.dart';
+// import 'package:ebabul/src/pages/persyaratan/index.dart';
 import 'package:ebabul/src/router/constant.dart';
 import 'package:ebabul/src/services/assets.dart';
 import 'package:flutter/material.dart';
@@ -24,60 +25,86 @@ class _DashboardState extends State<Dashboard> {
               Stack(
                 children: [
                   Container(
-                    height: 180,
-                    width: MediaQuery.of(context).size.width,
+                    height: 200,
                     decoration: BoxDecoration(
-                        color: Color(0xFF359D9E),
+                       boxShadow: [
+                        BoxShadow(
+                            color: Colors.black87,
+                            blurRadius: 2,
+                            offset: const Offset(0, 1))],
+                        gradient: LinearGradient(
+                          colors: [
+                Colors.greenAccent, Colors.blueAccent],
+                        ),
                         borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Image.asset(
-                          LogoPondok,
-                          height: 80,
-                          width: 80,
-                        ),
-                        SizedBox(height: 10),
-                        RichText(
-                          text: TextSpan(children: [
-                            TextSpan(
-                              text: 'Apikasi Pendaftaran\n',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
+                            bottomRight: Radius.circular(40),
+                            bottomLeft: Radius.circular(40)
                             ),
-                            TextSpan(
-                              text: 'Pondok Pesantren Babul Futuh Pandaan',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w300,
-                              ),
-                            )
-                          ]),
+                            ),
+                            padding: EdgeInsets.only(left: 30, right: 30),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(height: 20),
+                                  Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                    InkWell(
+                                      onTap: () => Get.toNamed(notifikasiRoute),
+                                      child: Icon(
+                                          Icons.notifications_active,
+                                          color: Colors.white,
+                                          size: 30),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 20),
+                                Text(
+                                  'Assalamualaikum',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  'Muhammad Dani',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(height: 3,),
+                                    Text(
+                                  'Selamat Datang Di Aplikasi Pendaftaran Pondok\nPesantren Babul Futuh',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ],
                         ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
               SizedBox(height: 20),
               Center(
                 child: Container(
                   height: 35,
-                  width: 440,
+                  width: 300,
                   decoration: BoxDecoration(
+                    boxShadow: [
+                        BoxShadow(
+                            color: Colors.black87,
+                            blurRadius: 2,
+                            offset: const Offset(0, 1))],
                       color: Color(0xFF359D9E),
-                      borderRadius: BorderRadius.circular(20)),
+                      borderRadius: BorderRadius.circular(20),
+                      ),
                   child: Center(
                     child: Text(
                       'Pilihan Menu',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 15,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
@@ -92,72 +119,81 @@ class _DashboardState extends State<Dashboard> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          children: [
-                            Image.asset(
-                              a10,
-                              height: 100,
-                              width: 100,
-                            ),
-                            SizedBox(height: 5),
-                            RichText(
-                              textAlign: TextAlign.center,
-                              text: TextSpan(children: [
-                                TextSpan(
-                                  text: 'Formulir\n',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Color(0xFF359D9E),
-                                  ),
-                                ),
-                                TextSpan(
-                                    text: 'Pendaftaran',
+                        InkWell(
+                          onTap: () => Get.toNamed(isiformulirRoute),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                a10,
+                                height: 80,
+                                width: 80,
+                              ),
+                              SizedBox(height: 5),
+                              RichText(
+                                textAlign: TextAlign.center,
+                                text: TextSpan(children: [
+                                  TextSpan(
+                                    text: 'Formulir\n',
                                     style: TextStyle(
-                                        fontSize: 13, color: Color(0xFF359D9E)))
-                              ]),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Image.asset(
-                              a10,
-                              height: 100,
-                              width: 100,
-                            ),
-                            SizedBox(height: 5),
-                            RichText(
-                              textAlign: TextAlign.center,
-                              text: TextSpan(children: [
-                                TextSpan(
-                                  text: 'Syarat\n',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Color(0xFF359D9E),
+                                      fontSize: 13,
+                                      color: Color(0xFF359D9E),
+                                    ),
                                   ),
-                                ),
-                                TextSpan(
-                                    text: 'Pendaftaran',
-                                    style: TextStyle(
-                                        fontSize: 13, color: Color(0xFF359D9E)))
-                              ]),
-                            )
-                          ],
+                                  TextSpan(
+                                      text: 'Pendaftaran',
+                                      style: TextStyle(
+                                          fontSize: 13, color: Color(0xFF359D9E))),
+                                ]),
+                              )
+                            ],
+                          ),
                         ),
-                        Column(
-                          children: [
-                            Image.asset(
-                              a10,
-                              height: 100,
-                              width: 100,
-                            ),
-                            SizedBox(height: 20),
-                            Text(
-                              'Biaya',
-                              style: TextStyle(
-                                  color: Color(0xFF359D9E), fontSize: 17),
-                            )
-                          ],
+                        InkWell(
+                          onTap: () => Get.toNamed(persyaratanRoute),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                a11,
+                                height: 80,
+                                width: 80,
+                              ),
+                              SizedBox(height: 5),
+                              RichText(
+                                textAlign: TextAlign.center,
+                                text: TextSpan(children: [
+                                  TextSpan(
+                                    text: 'Syarat\n',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      color: Color(0xFF359D9E),
+                                    ),
+                                  ),
+                                  TextSpan(
+                                      text: 'Pendaftaran',
+                                      style: TextStyle(
+                                          fontSize: 13, color: Color(0xFF359D9E))),
+                                ]),
+                              )
+                            ],
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.toNamed(pembayaranRoute),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                a13,
+                                height: 80,
+                                width: 80,
+                              ),
+                              SizedBox(height: 20),
+                              Text(
+                                'Pembayaran',
+                                style: TextStyle(
+                                    color: Color(0xFF359D9E), fontSize: 15),
+                              )
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -165,64 +201,70 @@ class _DashboardState extends State<Dashboard> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Column(
-                          children: [
-                            Image.asset(
-                              a14,
-                              height: 100,
-                              width: 100,
-                            ),
-                            SizedBox(height: 5),
-                            Text(
-                              'Profil Pondok',
-                              style: TextStyle(
-                                  color: Color(0xFF359D9E), fontSize: 17),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Image.asset(
-                              a14,
-                              height: 100,
-                              width: 100,
-                            ),
-                            SizedBox(height: 5),
-                            Text(
-                              'Profil Sekolah',
-                              style: TextStyle(
-                                  color: Color(0xFF359D9E), fontSize: 17),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Image.asset(
-                              a14,
-                              height: 100,
-                              width: 100,
-                            ),
-                            SizedBox(height: 5),
-                            InkWell(
-                              onTap: () => Get.toNamed(loginRoute),
-                              child: Text(
-                                'Login',
-                                style: TextStyle(
-                                    color: Color(0xFF359D9E), fontSize: 17),
+                        InkWell(
+                          onTap: () => Get.toNamed(lembagaRoute),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                a14,
+                                height: 80,
+                                width: 80,
                               ),
-                            )
-                          ],
+                              SizedBox(height: 5),
+                              Text(
+                                'Lembaga',
+                                style: TextStyle(
+                                    color: Color(0xFF359D9E), fontSize: 15),
+                              )
+                            ],
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.toNamed(pengumumanRoute),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                a15,
+                                height: 80,
+                                width: 80,
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                'Pengumuman',
+                                style: TextStyle(
+                                    color: Color(0xFF359D9E), fontSize: 15),
+                              )
+                            ],
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.toNamed(daftarpesertaRoute),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                a13,
+                                height: 80,
+                                width: 80,
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                  'Daftar Peserta',
+                                  style: TextStyle(
+                                      color: Color(0xFF359D9E), fontSize: 15),
+                                ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Container(
-                height: 25,
+                height: 15,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(color: Color(0xFF359D9E)),
+                decoration: BoxDecoration(color: Color(0xffEDEDED)),
               ),
               SizedBox(height: 35),
               Padding(
@@ -233,7 +275,7 @@ class _DashboardState extends State<Dashboard> {
                     Text(
                       'Alur Pendaftaran',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -241,14 +283,14 @@ class _DashboardState extends State<Dashboard> {
                     Text(
                       'Penerimaan Peserta Didik Baru (PPDB)',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       'Tahun Ajaran Baru 2023-2024',
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                         fontWeight: FontWeight.w500,
                       ),
                     )
@@ -273,8 +315,8 @@ class _DashboardState extends State<Dashboard> {
                               child: Text(
                                 'Calon Siswa Melakukan Pendaftaran dan Input\ndata secara online di Aplikasi Babul Futuh',
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.black,
+                                  fontSize: 13,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
@@ -306,8 +348,8 @@ class _DashboardState extends State<Dashboard> {
                               child: Text(
                                 'Calon Siswa Melengkapi persyaratan-\npersyaratan yang dibutuhkan',
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.black,
+                                  fontSize: 13,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
@@ -329,8 +371,8 @@ class _DashboardState extends State<Dashboard> {
                               child: Text(
                                 'Calon Siswa Melakukan pembayaran yang\ndi tentukan',
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.black,
+                                  fontSize: 13,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
@@ -362,8 +404,8 @@ class _DashboardState extends State<Dashboard> {
                               child: Text(
                                 'Pengumuman hasil pendaftaran',
                                 style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.black,
+                                  fontSize: 13,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
@@ -373,7 +415,8 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ),

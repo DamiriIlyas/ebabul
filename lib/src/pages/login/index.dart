@@ -22,20 +22,6 @@ class _LoginState extends State<Login> {
             ),
           ),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          iconSize: 25.0,
-          color: Colors.white,
-          onPressed: () {},
-        ),
-        title: Text(
-          'Login',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -75,7 +61,7 @@ class _LoginState extends State<Login> {
               Container(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  'Alamat',
+                  'Alamat Email',
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xFf359D9E),
@@ -88,7 +74,7 @@ class _LoginState extends State<Login> {
                 child: TextField(
                   // controller: address,
                   decoration: InputDecoration(
-                    hintText: 'Alamat Produk',
+                    hintText: 'Masukkan Email',
                   ),
                 ),
               ),
@@ -109,7 +95,7 @@ class _LoginState extends State<Login> {
                 child: TextField(
                   // controller: address,
                   decoration: InputDecoration(
-                    hintText: 'Password/NISN',
+                    hintText: 'Masukkan Password',
                   ),
                 ),
               ),
@@ -122,9 +108,16 @@ class _LoginState extends State<Login> {
                     width: 200,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [Colors.greenAccent, Colors.blueAccent],
-                      ),
+                        
+                        colors: [Colors.greenAccent, Colors.blueAccent],),
                       borderRadius: BorderRadius.circular(30),
+                       boxShadow: [
+                        BoxShadow(
+                            color: Colors.black87,
+                            blurRadius: 2,
+                            offset: const Offset(0, 1),
+                            ),
+                       ],
                     ),
                     child: Center(
                       child: Text(
@@ -138,7 +131,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

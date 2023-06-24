@@ -1,13 +1,16 @@
+import 'package:ebabul/src/router/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class ProfilPP extends StatefulWidget {
-  const ProfilPP({super.key});
+class lembaga extends StatefulWidget {
+  const lembaga({super.key});
 
   @override
-  State<ProfilPP> createState() => _ProfilPPState();
+  State<lembaga> createState() => _lembagaState();
 }
 
-class _ProfilPPState extends State<ProfilPP> {
+class _lembagaState extends State<lembaga> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,10 +32,13 @@ class _ProfilPPState extends State<ProfilPP> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 20),
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
-                          size: 20,
+                        child: InkWell(
+                          onTap: () => Get.toNamed(dashboardRoute),
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                            size: 20,
+                          ),
                         ),
                       ),
                       Padding(

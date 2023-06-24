@@ -1,4 +1,6 @@
+import 'package:ebabul/src/router/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Notifikasi extends StatefulWidget {
   const Notifikasi({super.key});
@@ -29,10 +31,13 @@ class _NotifikasiState extends State<Notifikasi> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 20),
-                        child: Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
-                          size: 20,
+                        child: InkWell(
+                          onTap: () => Get.toNamed(dashboardRoute),
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                            size: 20,
+                          ),
                         ),
                       ),
                       Padding(

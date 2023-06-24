@@ -25,7 +25,7 @@ class _RootState extends State<Root> {
     if (token != '' && token != null) {
       Get.offAndToNamed(mainRoute);
     } else {
-      Get.offAndToNamed(dashboardRoute);
+      Get.offAndToNamed(loginRoute);
     }
   }
 
@@ -44,8 +44,8 @@ class _RootState extends State<Root> {
           child: Center(
             child: Image.asset(
               LogoPondok,
-              height: 250,
-              width: 250,
+              height: 200,
+              width: 200,
             ),
           ),
         ),
