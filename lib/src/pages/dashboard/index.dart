@@ -27,14 +27,9 @@ class _DashboardState extends State<Dashboard> {
                   Container(
                     height: 200,
                     decoration: BoxDecoration(
-                       boxShadow: [
-                        BoxShadow(
-                            color: Colors.black87,
-                            blurRadius: 2,
-                            offset: const Offset(0, 1))],
                         gradient: LinearGradient(
                           colors: [
-                Colors.greenAccent, Colors.blueAccent],
+                Color(0xFF359D9E), const Color.fromARGB(255, 55, 122, 238)],
                         ),
                         borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(40),
@@ -92,11 +87,6 @@ class _DashboardState extends State<Dashboard> {
                   height: 35,
                   width: 300,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                        BoxShadow(
-                            color: Colors.black87,
-                            blurRadius: 2,
-                            offset: const Offset(0, 1))],
                       color: Color(0xFF359D9E),
                       borderRadius: BorderRadius.circular(20),
                       ),
@@ -242,7 +232,7 @@ class _DashboardState extends State<Dashboard> {
                           child: Column(
                             children: [
                               Image.asset(
-                                a13,
+                                a12,
                                 height: 80,
                                 width: 80,
                               ),

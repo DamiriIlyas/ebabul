@@ -26,7 +26,7 @@ class _daftarpesertaState extends State<daftarpeserta> {
         ),
         leading: IconButton(
           icon: InkWell(
-            onTap: () => Get.toNamed(pembayaranRoute),
+            onTap: () => Get.toNamed(dashboardRoute),
             child: Icon(Icons.arrow_back)),
           iconSize: 25.0,
           color: Colors.white,
@@ -42,74 +42,13 @@ class _daftarpesertaState extends State<daftarpeserta> {
         ),
       ),
         body:
-        SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.only(left: 15, right: 15,),
-            margin: EdgeInsets.symmetric(vertical: 15),
+        Container(
+          padding: EdgeInsets.only(left: 15, right: 15,),
+          margin: EdgeInsets.symmetric(vertical: 15),
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
-                  child: Container(
-                    height: 170,
-                    width: 300,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black87,
-                              blurRadius: 2,
-                              offset: const Offset(0, 1)),
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Container(
-                            child: Padding(
-                          padding: EdgeInsets.only(top: 20, bottom: 30, left: 20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Tanggal Masuk Aktif Kegiatan\nTahun Ajaran 2023-2024',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                   SizedBox(height: 10),
-                                   Text(
-                                    'Aktif Sekolah',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                   SizedBox(height: 5),
-                                   Text(
-                                    '12 06 Juli 2023',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        ),
-                                  ),
-                                  SizedBox(height: 5),
-                                   Text(
-                                    'Aktif Pesantren',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                   SizedBox(height: 5),
-                                   Text(
-                                    '12 Juni',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        ),
-                                  ),
-                                  SizedBox(height: 5),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),   
-                    ),
+              children: [                  
                 Padding(
                       padding:
                           const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
@@ -152,7 +91,43 @@ class _daftarpesertaState extends State<daftarpeserta> {
                               offset: const Offset(0, 1)),
                         ],
                         borderRadius: BorderRadius.circular(10)),
-                    child: Container(
+                    child: 
+                    Container(
+          padding: EdgeInsets.only(left: 15, right: 15,),
+          margin: EdgeInsets.symmetric(vertical: 15),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [                  
+                Padding(
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(36, 177, 182, 1),
+                            borderRadius: BorderRadius.circular(20)),
+                        child: TabBar(
+                          indicator: BoxDecoration(
+                            boxShadow: [
+                          BoxShadow(
+                              color: Colors.black87,
+                              blurRadius: 2,
+                              offset: const Offset(0, 1)),
+                        ],
+                            color: Color.fromRGBO(33, 189, 189, 1),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          tabs: [
+                            Tab(text: 'MTs Babul Futuh'),
+                            Tab(text: 'MA Babul Futuh'),
+                            // InkWell(
+                            //     onTap: () => Get.toNamed(inputpengeluaranRoute),
+                            //     child: Tab(text: 'Pengeluaran')),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
                             child: Padding( 
                           padding: EdgeInsets.only(top: 20, bottom: 30, left: 20),
                               child: Column(
@@ -803,8 +778,12 @@ class _daftarpesertaState extends State<daftarpeserta> {
                               ),
                           ),
                     	),
-                  		),
+              ],
           		),
+          ),
+                    ),
+                  ),
+              ),
               ],
             ),
           ),
