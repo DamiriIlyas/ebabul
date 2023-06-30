@@ -1,3 +1,5 @@
+import 'package:ebabul/src/pages/daftarpeserta/ma.dart';
+import 'package:ebabul/src/pages/daftarpeserta/mts.dart';
 import 'package:ebabul/src/pages/pembayaran/index.dart';
 import 'package:ebabul/src/pages/dashboard/index.dart';
 import 'package:ebabul/src/pages/isiformulir/index.dart';
@@ -5,7 +7,6 @@ import 'package:ebabul/src/pages/kwintansi/index.dart';
 import 'package:ebabul/src/pages/login/index.dart';
 import 'package:ebabul/src/pages/metodepembayaran/index.dart';
 import 'package:ebabul/src/pages/notifikasi/index.dart';
-import 'package:ebabul/src/pages/daftarpeserta/index.dart';
 import 'package:ebabul/src/pages/pengumuman/index.dart';
 import 'package:ebabul/src/pages/persyaratan/index.dart';
 import 'package:ebabul/src/pages/lembaga/index.dart';
@@ -55,11 +56,15 @@ final List<GetPage<dynamic>> routes = [
     page: () => MetodePembayaran(),
   ),
   GetPage(
-    name: daftarpesertaRoute,
-    page: () => daftarpeserta(),
+    name: mtsRoute,
+    page: () => Mts(),
   ),
   GetPage(
     name: lembagaRoute,
-    page: () => lembaga(),
+    page: () => Lembaga(),
+  ),
+  GetPage(
+    name: maRoute,
+    page: () => Ma(),
   ),
 ];

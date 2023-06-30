@@ -29,5 +29,6 @@ const String a26 = 'assets/a26.png';
 const String a27 = 'assets/a27.png';
 const String a28 = 'assets/a28.png';
 const String a29 = 'assets/a29.png';
-const String a30 = 'assets/a30.png';
+const String a30 = 'assets/30.png';
 const String a55 = 'assets/a55.png';
+const String oyi = 'assets/oyi.png';

@@ -2,14 +2,14 @@ import 'package:ebabul/src/router/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class daftarpeserta extends StatefulWidget {
-  const daftarpeserta({super.key});
+class Mts extends StatefulWidget {
+  const Mts({super.key});
 
   @override
-  State<daftarpeserta> createState() => _daftarpesertaState();
+  State<Mts> createState() => _daftarpesertaState();
 }
 
-class _daftarpesertaState extends State<daftarpeserta> {
+class _daftarpesertaState extends State<Mts> {
   @override
   Widget build(BuildContext context) {
      return DefaultTabController(
@@ -49,38 +49,10 @@ class _daftarpesertaState extends State<daftarpeserta> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [                  
-                Padding(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(36, 177, 182, 1),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: TabBar(
-                          indicator: BoxDecoration(
-                            boxShadow: [
-                          BoxShadow(
-                              color: Colors.black87,
-                              blurRadius: 2,
-                              offset: const Offset(0, 1)),
-                        ],
-                            color: Color.fromRGBO(33, 189, 189, 1),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          tabs: [
-                            Tab(text: 'MTs Babul Futuh'),
-                            Tab(text: 'MA Babul Futuh'),
-                            // InkWell(
-                            //     onTap: () => Get.toNamed(inputpengeluaranRoute),
-                            //     child: Tab(text: 'Pengeluaran')),
-                          ],
-                        ),
-                      ),
-                    ),
               Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                  padding: const EdgeInsets.only(left: 10, right: 20, bottom: 30),
                   child: Container(
-                    height: 450,
+                    height: 550,
                     width: 400,
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -93,9 +65,8 @@ class _daftarpesertaState extends State<daftarpeserta> {
                         borderRadius: BorderRadius.circular(10)),
                     child: 
                     Container(
-          padding: EdgeInsets.only(left: 15, right: 15,),
+          padding: EdgeInsets.only(left: 1, right: 1,),
           margin: EdgeInsets.symmetric(vertical: 15),
-          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [                  
@@ -119,7 +90,8 @@ class _daftarpesertaState extends State<daftarpeserta> {
                           ),
                           tabs: [
                             Tab(text: 'MTs Babul Futuh'),
-                            Tab(text: 'MA Babul Futuh'),
+                            InkWell(onTap: () => Get.toNamed(maRoute),
+                            child: Tab(text: 'MA Babul Futuh')),
                             // InkWell(
                             //     onTap: () => Get.toNamed(inputpengeluaranRoute),
                             //     child: Tab(text: 'Pengeluaran')),
@@ -129,14 +101,14 @@ class _daftarpesertaState extends State<daftarpeserta> {
                     ),
                     Container(
                             child: Padding( 
-                          padding: EdgeInsets.only(top: 20, bottom: 30, left: 20),
+                          padding: EdgeInsets.only(top: 10, right: 5, bottom: 30, left: 20),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
                                       Container(
-                                            height: 40,
+                                            height: 50,
                                             width: 40,
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(10),
@@ -783,7 +755,6 @@ class _daftarpesertaState extends State<daftarpeserta> {
           ),
                     ),
                   ),
-              ),
               ],
             ),
           ),

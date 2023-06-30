@@ -57,7 +57,7 @@ class _pembayaranState extends State<pembayaran> {
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20, top: 60, bottom: 10),
                     child: Container(
-                      height: 650,
+                      height: 800,
                       width: 320,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -721,14 +721,82 @@ class _pembayaranState extends State<pembayaran> {
                                   ],
                                 ),
                                 ),
+                                Center(
+                child: InkWell(
+                  onTap: () => Get.toNamed(dashboardRoute),
+                  child: Container(
+                    height: 40,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        
+                        colors: [Colors.greenAccent, Colors.blueAccent],),
+                      borderRadius: BorderRadius.circular(30),
+                       boxShadow: [
+                        BoxShadow(
+                            color: Colors.black87,
+                            blurRadius: 2,
+                            offset: const Offset(0, 1),
+                            ),
+                       ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Bayar Sekarang',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+              Center(
+                child: InkWell(
+                  onTap: () => Get.toNamed(dashboardRoute),
+                  child: Container(
+                    height: 40,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        
+                        colors: [Colors.greenAccent, Colors.blueAccent],),
+                      borderRadius: BorderRadius.circular(30),
+                       boxShadow: [
+                        BoxShadow(
+                            color: Colors.black87,
+                            blurRadius: 2,
+                            offset: const Offset(0, 1),
+                            ),
+                       ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Bayar Nyicil',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
                                   ],
+                                  
                               ),
                       ),
+                      
                     ),
                       ),
                   ),
                 ],
             ),
+              
             ],
           ),
         ),

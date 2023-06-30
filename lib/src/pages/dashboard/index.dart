@@ -25,7 +25,7 @@ class _DashboardState extends State<Dashboard> {
               Stack(
                 children: [
                   Container(
-                    height: 200,
+                    height: 230,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
@@ -41,18 +41,21 @@ class _DashboardState extends State<Dashboard> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(height: 20),
-                                  Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
-                                    InkWell(
-                                      onTap: () => Get.toNamed(notifikasiRoute),
-                                      child: Icon(
+                                      Image.asset(
+                                        LogoPondok, height: 70,
+                                width: 70,),
+                                      
+                                      Icon(
                                           Icons.notifications_active,
                                           color: Colors.white,
                                           size: 30),
-                                    ),
-                                  ],
+                                  ]
+                                  
                                 ),
+                                
                                 SizedBox(height: 20),
                                 Text(
                                   'Assalamualaikum',
@@ -228,7 +231,7 @@ class _DashboardState extends State<Dashboard> {
                           ),
                         ),
                         InkWell(
-                          onTap: () => Get.toNamed(daftarpesertaRoute),
+                          onTap: () => Get.toNamed(maRoute),
                           child: Column(
                             children: [
                               Image.asset(

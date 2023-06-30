@@ -10,4 +10,5 @@ const String isiformulirRoute = '/isiformulir';
 const String metodepembayaranRoute = '/metodepembayaran';
 const String pembayaranRoute = '/pembayaran';
 const String lembagaRoute = '/lembaga';
-const String daftarpesertaRoute = '/daftarpeserta';
+const String mtsRoute = '/mts';
+const String maRoute = '/ma';
