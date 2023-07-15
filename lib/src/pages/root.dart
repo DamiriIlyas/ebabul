@@ -14,26 +14,6 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-  // void _init() {
-  //   // Timer(const Duration(seconds: 3), () {
-  //   //   getPref();
-  //   // });
-  // }
-
-  // void getPref() async {
-  //   String? token = await getToken();
-  //   if (token != '' && token != null) {
-  //     Get.offAndToNamed(mainRoute);
-  //   } else {
-  //     Get.offAndToNamed(loginRoute);
-  //   }
-  // }
-
-  // @override
-  // void initState() {
-  //   _init();
-  //   super.initState();
-  // }
 
   @override
   Widget build(BuildContext context) {

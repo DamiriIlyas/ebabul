@@ -1,14 +1,14 @@
 import 'package:ebabul/src/services/assets.dart';
 import 'package:flutter/material.dart';
 
-class Lembaga extends StatefulWidget {
-  const Lembaga({super.key});
+class profilpondok extends StatefulWidget {
+  const profilpondok({super.key});
 
   @override
-  State<Lembaga> createState() => _LembagaState();
+  State<profilpondok> createState() => _profilpondokState();
 }
 
-class _LembagaState extends State<Lembaga> {
+class _profilpondokState extends State<profilpondok> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

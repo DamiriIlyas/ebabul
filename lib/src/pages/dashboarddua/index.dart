@@ -1,20 +1,18 @@
-// import 'package:ebabul/src/services/assets.dart';
-// import 'package:ebabul/src/services/assets.dart';
-// import 'package:ebabul/src/pages/persyaratan/index.dart';
 import 'package:ebabul/src/router/constant.dart';
 import 'package:ebabul/src/services/assets.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
-class Dashboard extends StatefulWidget {
-  const Dashboard({super.key});
+class dashboarddua extends StatefulWidget {
+  const dashboarddua({super.key});
 
   @override
-  State<Dashboard> createState() => _DashboardState();
+  State<dashboarddua> createState() => _dashboardduaState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _dashboardduaState extends State<dashboarddua> {
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -112,34 +110,31 @@ class _DashboardState extends State<Dashboard> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        InkWell(
-                          onTap: () => Get.toNamed(isiformulirRoute),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                a10,
-                                height: 80,
-                                width: 80,
-                              ),
-                              SizedBox(height: 5),
-                              RichText(
-                                textAlign: TextAlign.center,
-                                text: TextSpan(children: [
-                                  TextSpan(
-                                    text: 'Formulir\n',
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      color: Color(0xFF359D9E),
-                                    ),
+                        Column(
+                          children: [
+                            Image.asset(
+                              a10,
+                              height: 80,
+                              width: 80,
+                            ),
+                            SizedBox(height: 5),
+                            RichText(
+                              textAlign: TextAlign.center,
+                              text: TextSpan(children: [
+                                TextSpan(
+                                  text: 'Formulir\n',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Color(0xFF359D9E),
                                   ),
-                                  TextSpan(
-                                      text: 'Pendaftaran',
-                                      style: TextStyle(
-                                          fontSize: 13, color: Color(0xFF359D9E))),
-                                ]),
-                              )
-                            ],
-                          ),
+                                ),
+                                TextSpan(
+                                    text: 'Pendaftaran',
+                                    style: TextStyle(
+                                        fontSize: 13, color: Color(0xFF359D9E))),
+                              ]),
+                            ),
+                          ],
                         ),
                         InkWell(
                           onTap: () => Get.toNamed(persyaratanRoute),
@@ -194,23 +189,20 @@ class _DashboardState extends State<Dashboard> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        InkWell(
-                          onTap: () => Get.toNamed(profilpondokRoute),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                a14,
-                                height: 80,
-                                width: 80,
-                              ),
-                              SizedBox(height: 5),
-                              Text(
-                                'Lembaga',
-                                style: TextStyle(
-                                    color: Color(0xFF359D9E), fontSize: 15),
-                              )
-                            ],
-                          ),
+                        Column(
+                          children: [
+                            Image.asset(
+                              a14,
+                              height: 80,
+                              width: 80,
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              'Lembaga',
+                              style: TextStyle(
+                                  color: Color(0xFF359D9E), fontSize: 15),
+                            )
+                          ],
                         ),
                         InkWell(
                           onTap: () => Get.toNamed(pengumumanRoute),

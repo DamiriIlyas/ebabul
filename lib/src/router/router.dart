@@ -1,5 +1,6 @@
 import 'package:ebabul/src/pages/daftarpeserta/ma.dart';
 import 'package:ebabul/src/pages/daftarpeserta/mts.dart';
+// import 'package:ebabul/src/pages/datapribadi/index.dart';
 import 'package:ebabul/src/pages/pembayaran/index.dart';
 import 'package:ebabul/src/pages/dashboard/index.dart';
 import 'package:ebabul/src/pages/isiformulir/index.dart';
@@ -9,7 +10,9 @@ import 'package:ebabul/src/pages/metodepembayaran/index.dart';
 import 'package:ebabul/src/pages/notifikasi/index.dart';
 import 'package:ebabul/src/pages/pengumuman/index.dart';
 import 'package:ebabul/src/pages/persyaratan/index.dart';
-import 'package:ebabul/src/pages/lembaga/index.dart';
+import 'package:ebabul/src/pages/profilpondok/index.dart';
+import 'package:ebabul/src/pages/profilsekolah/index.dart';
+import 'package:ebabul/src/pages/totalpembayaran/index.dart';
 import 'package:ebabul/src/pages/root.dart';
 import 'package:ebabul/src/router/constant.dart';
 import 'package:get/get.dart';
@@ -25,6 +28,10 @@ final List<GetPage<dynamic>> routes = [
   ),
   GetPage(
     name: dashboardRoute,
+    page: () => Dashboard(),
+  ),
+  GetPage(
+    name: dashboardduaRoute,
     page: () => Dashboard(),
   ),
   GetPage(
@@ -51,20 +58,28 @@ final List<GetPage<dynamic>> routes = [
     name: isiformulirRoute,
     page: () => IsiFormulir(),
   ),
-  GetPage(
-    name: metodepembayaranRoute,
-    page: () => MetodePembayaran(),
-  ),
+  // GetPage(
+  //   name: metodepembayaranRoute,
+  //   page: () => MetodePembayaran(),
+  // ),
   GetPage(
     name: mtsRoute,
     page: () => Mts(),
   ),
   GetPage(
-    name: lembagaRoute,
-    page: () => Lembaga(),
+    name: profilpondokRoute,
+    page: () => profilpondok(),
+  ),
+  GetPage(
+    name: profilsekolahRoute,
+    page: () => ProfilSekolah(),
   ),
   GetPage(
     name: maRoute,
     page: () => Ma(),
   ),
+  // GetPage(
+  //   name: datapribadiRoute,
+  //   page: () => DataPribadi(),
+  // ),
 ];

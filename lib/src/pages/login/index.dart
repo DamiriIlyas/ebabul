@@ -5,6 +5,7 @@ import 'package:ebabul/src/router/constant.dart';
 import 'package:ebabul/src/services/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -14,11 +15,12 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  LoginController loginCon = Get.put(LoginController());
   bool validate = false;
   bool inHiddenPass = true;
   bool _isHidden = true;
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
 
   
   @override
@@ -82,7 +84,7 @@ class _LoginState extends State<Login> {
               Container(
                 alignment: Alignment.bottomLeft,
                 child: TextField(
-                  controller: email,
+                  // controller: email,
                   // controller: address,
                   decoration: InputDecoration(
                     filled: true,
@@ -105,8 +107,8 @@ class _LoginState extends State<Login> {
               Container(
                 alignment: Alignment.bottomLeft,
                 child: TextField(
-                  obscureText: _isHidden,
-                  controller: password,
+                  // obscureText: _isHidden,
+                  // controller: password,
                   // controller: address,
                   decoration: InputDecoration(
                     hintText: 'Masukkan Password',
@@ -116,15 +118,16 @@ class _LoginState extends State<Login> {
               SizedBox(height: 60),
               Center(
                 child: InkWell(
-                  onTap: (){
-                    String emails = email.text;
-                    String passwords = password.text;
-                 
-                 LoginUser.loginUser(emails, passwords);
-                  },
+                  onTap: () async{
+                    if(email.text.isEmpty || password.text.isEmpty) {
+                      setState(() {
+                        validate = true;
+                      });
+                      await loginCon.loginUser(email.text, password.text);
+                    }
                   child: Container(
                     height: 50,
-                    width: 200,
+                    width: 150,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         
@@ -148,10 +151,10 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ),
-            ],
+                  );
+              },
+          )
+          )],
           ),
         ),
       ),
