@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'package:ebabul/src/controller/LoginController.dart';
 import 'package:ebabul/src/router/constant.dart';
 import 'package:ebabul/src/services/assets.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +14,13 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool validate = false;
+  bool inHiddenPass = true;
+  bool _isHidden = true;
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,8 +82,10 @@ class _LoginState extends State<Login> {
               Container(
                 alignment: Alignment.bottomLeft,
                 child: TextField(
+                  controller: email,
                   // controller: address,
                   decoration: InputDecoration(
+                    filled: true,
                     hintText: 'Masukkan Email',
                   ),
                 ),
@@ -93,6 +105,8 @@ class _LoginState extends State<Login> {
               Container(
                 alignment: Alignment.bottomLeft,
                 child: TextField(
+                  obscureText: _isHidden,
+                  controller: password,
                   // controller: address,
                   decoration: InputDecoration(
                     hintText: 'Masukkan Password',
@@ -102,7 +116,12 @@ class _LoginState extends State<Login> {
               SizedBox(height: 60),
               Center(
                 child: InkWell(
-                  onTap: () => Get.toNamed(dashboardRoute),
+                  onTap: (){
+                    String emails = email.text;
+                    String passwords = password.text;
+                 
+                 LoginUser.loginUser(emails, passwords);
+                  },
                   child: Container(
                     height: 50,
                     width: 200,
@@ -138,4 +157,9 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+  
+
+
+
+
 }

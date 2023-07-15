@@ -753,7 +753,7 @@ class _pembayaranState extends State<pembayaran> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 10,),
               Center(
                 child: InkWell(
                   onTap: () => Get.toNamed(dashboardRoute),

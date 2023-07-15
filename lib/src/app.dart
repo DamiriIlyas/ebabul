@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      initialRoute: rootRoute,
+      initialRoute: loginRoute,
       getPages: routes,
     );
   }
